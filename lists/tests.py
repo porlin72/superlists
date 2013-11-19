@@ -7,16 +7,24 @@ Replace this with more appropriate tests for your application.
 
 from django.core.urlresolvers import resolve
 from django.test import TestCase
+<<<<<<< HEAD
 from django.http import HttpRequest
 from django.template.loader import render_to_string
+=======
+from lists.views import home_page
+>>>>>>> 700ca793f02a110250cf20101be3fad4055b8bb0
 
 from lists.views import home_page
 
+<<<<<<< HEAD
         
+=======
+>>>>>>> 700ca793f02a110250cf20101be3fad4055b8bb0
 class HomePageTest(TestCase):
     
     def test_root_url_resolves_to_home_page_view(self):
         found = resolve('/')
+<<<<<<< HEAD
         self.assertEqual(found.func, home_page)
         print "Test 1 is working properly."
         
@@ -29,3 +37,6 @@ class HomePageTest(TestCase):
         # self.assertIn(b'<title>To-Do lists</title>', response.content)
         # self.assertTrue(response.content.endswith(b'</html>'))
         print "Test 2 is working properly."
+=======
+        self.assertEqual(found.func, home_page)
+>>>>>>> 700ca793f02a110250cf20101be3fad4055b8bb0

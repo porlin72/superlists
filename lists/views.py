@@ -1,10 +1,10 @@
-<<<<<<< HEAD
+from django.http import HttpResponse
 from django.shortcuts import render
+# Create your views here.
 
 def home_page(request):
-    return render(request, 'home.html')
-=======
-# Create your views here.
-def home_page():
-    pass
->>>>>>> 700ca793f02a110250cf20101be3fad4055b8bb0
+    # if request.method == 'POST':
+        # return HttpResponse(request.POST['item_text'])
+    return render(request, 'home.html', {
+        'new_item_text': request.POST.get('item_text', ''),
+    })
